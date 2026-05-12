@@ -1,73 +1,84 @@
-const footerColumns = [
+export const footerTopData = {
+  title: "Хотите Шагнуть в Будущее Раньше Других?",
+  cta: {
+    type: "button",
+    title: "Запросить ранний доступ",
+  },
+};
+
+export const footerBrandData = {
+  title: "GTP-3",
+  address: "ул. Профессора Поздеева, 13, к.Г, Пермь, Пермский край, 614013",
+  rights: "Все права защищены",
+};
+
+export const footerMiddleData = [
   {
     title: "Ссылки",
-    links: [
+    list: [
       {
-        href: "#",
         title: "Овероны",
+        href: "#",
       },
       {
+        title: "Соц.сети",
         href: "#",
-        title: "Соц. сети",
       },
       {
-        href: "#",
         title: "О компании",
+        href: "#",
       },
       {
-        href: "#",
         title: "Контакты",
+        href: "#",
       },
     ],
   },
   {
     title: "Компания",
-    links: [
+    list: [
       {
+        title: "Условия пользования",
         href: "#",
-        title: "Условия использования",
       },
       {
-        href: "#",
         title: "Перс. данные",
+        href: "#",
       },
       {
-        href: "#",
         title: "Контакты",
+        href: "#",
       },
     ],
   },
   {
     title: "Контакты",
-    address: "ул. Профессора Поздеева, 13, к.Г, Пермь",
-    links: [
+    list: [
       {
-        href: "tel:+73422198520",
-        title: "+7 (342) 2-198-520",
+        title: "ул. Профессора Поздеева, 13, к.Г, Пермь",
+        href: "#",
       },
       {
-        href: "mailto:info@pstu.ru",
+        title: "+7 (342) 2-198-520",
+        href: "tel:+73422198520",
+      },
+      {
         title: "info@pstu.ru",
+        href: "mailto:info@pstu.ru",
       },
     ],
   },
 ];
 
+export const footerBottomData = {
+  title: "© 2023 GPT-3. Все права защищены.",
+};
+
 const footerData = {
-  cta: {
-    header: "Хотите Шагнуть в Будущее Раньше Других?",
-    button: {
-      type: "button",
-      title: "Запросить ранний доступ",
-    },
-  },
-  brand: {
-    logoText: "GPT-3",
-    address: "ул. Профессора Поздеева, 13, к.Г, Пермь, Пермский край, 614013",
-    rights: "Все права защищены",
-  },
-  columns: footerColumns,
-  copyright: "© 2023 GPT-3. Все права защищены.",
+  footerTopData,
+  footerBrandData,
+  footerMiddleData,
+  footerBottomData,
 };
 
 export default footerData;

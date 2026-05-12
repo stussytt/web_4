@@ -1,24 +1,24 @@
 import expectationsData from "../mockData/expectationsData";
 
-export const ExpectationsLeft = ({ expectationsImage: { src, alt } }) => {
+export const FeatureImage = ({ featureImageData }) => {
+  const { src, alt } = featureImageData;
   return (
-    <div className="expectations__left">
+    <div className="expectations_left">
       <img src={src} alt={alt} />
     </div>
   );
 };
 
-export const ExpectationsRight = ({
-  expectationsContent: { label, header, text, cta },
-}) => {
+export const ExpectationsContentRight = ({ expectationsContentRightData }) => {
+  const { label, header, content, cta } = expectationsContentRightData;
   return (
-    <div className="expectations__right">
-      <a href={cta.href} className="label__cta">
+    <div className="expectations_right">
+      <a href={cta.href} className="label_cta">
         {label}
       </a>
-      <h2 className="expectations_header">{header}</h2>
-      <p className="expectations_content">{text}</p>
-      <a href={cta.href} className="right__cta">
+      <h2 className="right_header">{header}</h2>
+      <p className="expectations_content">{content}</p>
+      <a href={cta.href} className="right_cta">
         {cta.title}
       </a>
     </div>
@@ -26,12 +26,14 @@ export const ExpectationsRight = ({
 };
 
 const Expectations = () => {
-  const { expectationsImage, expectationsContent } = expectationsData;
+  const { FeatureImageData, expectationsContentRightData } = expectationsData;
 
   return (
-    <section className="expectations">
-      <ExpectationsLeft expectationsImage={expectationsImage} />
-      <ExpectationsRight expectationsContent={expectationsContent} />
+    <section className="section expectations">
+      <FeatureImage featureImageData={FeatureImageData} />
+      <ExpectationsContentRight
+        expectationsContentRightData={expectationsContentRightData}
+      />
     </section>
   );
 };

@@ -1,62 +1,81 @@
 import footerData from "../mockData/footerData";
 
-export const FooterCta = ({ cta }) => {
+export const FooterTop = ({ footerTopData }) => {
+  const { title, cta } = footerTopData;
   return (
     <div className="footer-cta">
-      <h2 className="footer-cta__title">{cta.header}</h2>
-      <button className="footer-cta__btn">{cta.button.title}</button>
+      <h2 className="footer-cta__title">{title}</h2>
+      <button className="footer-cta__btn">{cta.title}</button>
     </div>
   );
 };
 
-export const FooterBrand = ({ brand }) => {
-  const { logoText, address, rights } = brand;
+export const FooterBrand = ({ footerBrandData }) => {
+  const { title, address, rights } = footerBrandData;
   return (
     <div className="footer-brand">
-      <h3 className="footer-brand__logo">{logoText}</h3>
+      <div className="footer-brand__logo">{title}</div>
       <p className="footer-brand__text">{address}</p>
       <p className="footer-brand__rights">{rights}</p>
     </div>
   );
 };
 
-export const FooterColumn = ({ column }) => {
-  const { title, links } = column;
+export const FooterListItem = ({ item }) => {
+  const { title, href } = item;
+  return (
+    <li>
+      <a href={href}>{title}</a>
+    </li>
+  );
+};
+
+export const FooterColList = ({ list }) => {
+  const listItems = list.map((item, index) => (
+    <FooterListItem key={index} item={item} />
+  ));
+  return <ul className="footer-col__list">{listItems}</ul>;
+};
+
+export const FooterCol = ({ colData }) => {
+  const { title, list } = colData;
   return (
     <div className="footer-col">
       <h4 className="footer-col__title">{title}</h4>
-      <ul className="footer-col__list">
-        {links.map((link, index) => (
-          <li key={index}>
-            <a href={link.href} className="footer-col__link">
-              {link.title}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <FooterColList list={list} />
+    </div>
+  );
+};
+
+export const FooterMiddle = ({ footerMiddleData }) => {
+  return footerMiddleData.map((col, index) => (
+    <FooterCol key={index} colData={col} />
+  ));
+};
+
+export const FooterBottom = ({ footerBottomData }) => {
+  const { title } = footerBottomData;
+  return (
+    <div className="copyright-bar">
+      <p>{title}</p>
     </div>
   );
 };
 
 const Footer = () => {
-  const { cta, brand, columns, copyright } = footerData;
+  const { footerTopData, footerBrandData, footerMiddleData, footerBottomData } =
+    footerData;
   return (
-    <section className="footer section">
-      <div className="site-footer">
-        <FooterCta cta={cta} />
-        <div className="footer-main">
-          <div className="footer-row">
-            <FooterBrand brand={brand} />
-            {columns.map((column, index) => (
-              <FooterColumn key={index} column={column} />
-            ))}
-          </div>
-        </div>
-        <div className="copyright-bar">
-          <p>{copyright}</p>
+    <footer className="site-footer">
+      <FooterTop footerTopData={footerTopData} />
+      <div className="footer-main">
+        <div className="footer-row">
+          <FooterBrand footerBrandData={footerBrandData} />
+          <FooterMiddle footerMiddleData={footerMiddleData} />
         </div>
       </div>
-    </section>
+      <FooterBottom footerBottomData={footerBottomData} />
+    </footer>
   );
 };
 

@@ -1,14 +1,15 @@
-import expectationsImagePng from "../assets/img/Feature Image.png";
+import FeatureImagePng from "../assets/img/Feature Image.png";
 
-export const expectationsImage = {
-  src: expectationsImagePng,
-  alt: "expectations",
+export const FeatureImageData = {
+  src: FeatureImagePng,
+  alt: "Превосходя все ожидания",
 };
 
-export const expectationsContent = {
+export const expectationsContentRightData = {
   label: "Запросить ранний доступ",
   header: "Превосходя все ожидания",
-  text: "Однако кровать для помощи в путешествии неприятна. Не мысли все осуществляют благословение. Снисхождение ко всему, радость, изменение бурной привязанности. Вечеринку мы лет на заказ разрешили.",
+  content:
+    "Однако кровать для помощи в путешествии неприятна. Не мысли все осуществляют благословение. Снисхождение ко всему, радость,изменение бурной привязанности Вечеринку мы лет на заказ разрешили.",
   cta: {
     href: "#",
     title: "Запросить ранний доступ",
@@ -16,8 +17,8 @@ export const expectationsContent = {
 };
 
 const expectationsData = {
-  expectationsImage,
-  expectationsContent,
+  FeatureImageData,
+  expectationsContentRightData,
 };
 
 export default expectationsData;
