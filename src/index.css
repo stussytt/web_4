@@ -27,7 +27,7 @@
 /* Общие стили для всего приложения */
 
 body {
-  background: #040c18;
+  background: #031b34;
   padding: 0 2rem;
   overflow: auto;
 }
@@ -144,7 +144,7 @@ p {
   position: fixed;
   justify-content: space-between;
   align-items: center;
-  background: #040c18;
+  background: #031b34;
 }
 
 .header .header__logo .logo__link {
@@ -258,7 +258,7 @@ p {
   justify-content: space-between;
   column-gap: 1rem;
   /* min-height: 60vh; */
-  padding: 1rem 0 3rem;
+  padding: 14rem 0 3rem;
 }
 
 .hero_section .hero_section__left {
@@ -266,7 +266,6 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: left;
   row-gap: 3rem;
   width: 75%;
 }
@@ -811,7 +810,6 @@ p {
   .header {
     max-width: 1440px;
     width: 100%;
-    z-index: 100;
   }
 
   .hero_section {
@@ -827,12 +825,12 @@ p {
   .hero_section .hero_section__left {
     width: 100%;
     align-items: center;
-    text-align: left;
+    text-align: center;
     row-gap: 2rem;
   }
 
   .hero_section .hero_section__left .left__cta_buttons {
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 0;
   }
@@ -957,9 +955,8 @@ p {
     max-width: 1169px;
     width: 100%;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    text-align: left;
+    justify-content: space-between;
     margin: 10rem 0 4rem;
     column-gap: 0;
     width: 90%;
@@ -968,12 +965,12 @@ p {
   .hero_section .hero_section__left {
     width: 100%;
     align-items: center;
-    text-align: left;
+    text-align: center;
     row-gap: 2rem;
   }
 
   .hero_section .hero_section__left .left__cta_buttons {
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 0;
   }
@@ -1115,7 +1112,6 @@ p {
     flex-direction: column;
     justify-content: center;
     column-gap: 0;
-    /* margin: 0; */
     width: 90%;
   }
 
@@ -1175,7 +1171,7 @@ p {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 766px) {
   p {
     font-size: 14px;
     line-height: 1.5;
